@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: rgb(232, 232, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    border-radius: 10px;
+}
+
+.container2 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 70px 10px 10px 5px;
+}
+
+.container2 .box {
+    z-index: 2;
+    position: relative;
+    margin-bottom: 20px;
+    /* Нижний отступ между элементами аккордеона */
+}
+
+.container2 .box:last-child {
+    margin-bottom: 0;
+    /* Для последнего элемента нижний отступ убираем */
+}
+
+.container2 .box .label {
+
+    position: relative;
+    padding: 10px 50px;
+    /* Внутренний отступ для видимой части */
+    /* Цвет элемента аккордеона */
+    color: #fff;
+    /* Цвет шрифта элемента аккордеона */
+    cursor: pointer;
+    /* Меняем курсор при наведении */
+}
+
+.container2 .box .label::after {
+    content: "+";
+    /* Задаем иконку "+" для элемента аккордеона */
+    position: absolute;
+    top: 50%;
+    /* Выравнивание по центру */
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container2 .box.active .label::after {
+    content: "\2014";
+    /* Меняем иконку на "-" при нажатии на элемент */
+}
+
+.container2 .box .content {
+    position: relative;
+    background-color: #fff;
+    /* Цвет фона контента */
+    overflow: hidden;
+    max-height: 0;
+    /* Скрываем контент */
+    transition: 0.3s;
+    /* Для плавности анимации */
+}
+
+.container2 .box .content p {
+    padding: 20px;
+}

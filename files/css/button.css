@@ -1,0 +1,13 @@
+.butt {
+    background: linear-gradient(241deg, #4c025c, #7c56c1);
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 110px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
